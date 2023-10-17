@@ -96,6 +96,7 @@ static Keychord *keychords[] = {
        &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_0}}, view, {.ui = 1 << 9 }}),  // For tag "10"
        &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_1}}, view, {.ui = 1 << 10}}),  // For tag "11"
        &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_2}}, view, {.ui = 1 << 11}}),  // For tag "12"
+       &((Keychord){3, {{MODKEY, XK_w}, {0, XK_1}, {0, XK_2}}, tag, {.ui = 1 << 11 }}),  // Move window to tag "12"
        TAGKEYS(                        XK_1,                      0)
        TAGKEYS(                        XK_2,                      1)
        TAGKEYS(                        XK_3,                      2)
