@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -28,10 +28,10 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class     instance  title           tags mask  isfloating  isTerminal   noswallow monitor */
-	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
-	{ "st-256color",      NULL,     NULL,           0,         0,          1,           0,        -1 },
-	{ NULL,      NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
+	{ "Gimp",         NULL,     NULL,           0,         1,          0,           0,        -1 },
+	{ "Firefox",      NULL,     NULL,           1 << 1,    0,          0,          -1,        -1 }, //Puts firefox on tag 2 when firefox is frist launched
+	{ "st-256color",  NULL,     NULL,           0,         0,          1,           0,        -1 },
+	{ NULL,           NULL,     "Event Tester", 0,         0,          0,           1,        -1 }, /* xev */
 };
 
 /* layout(s) */
@@ -95,10 +95,11 @@ static Keychord *keychords[] = {
        &((Keychord){1, {{MODKEY|ShiftMask, XK_period}},                        tagmon,         {.i = +1 } }),
        &((Keychord){1, {{MODKEY|ShiftMask, XK_q}},                             quit,           {0} }), 
        &((Keychord){1, {{MODKEY|ShiftMask, XK_r}},                             quit,           {1} }),
-       &((Keychord){2, {{MODKEY, XK_a}, {0, XK_a}},                            spawn,          SHCMD("alacritty") }),
+       &((Keychord){2, {{MODKEY, XK_a}, {0, XK_a}},                            spawn,          SHCMD("alacritty") }), //Launch alacritty 
        &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_0}}, view, {.ui = 1 << 9 }}),  // For tag "10"
        &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_1}}, view, {.ui = 1 << 10}}),  // For tag "11"
        &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_2}}, view, {.ui = 1 << 11}}),  // For tag "12"
+       &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_3}}, view, {.ui = 1 << 12}}),  // For tag "13"
        &((Keychord){3, {{MODKEY, XK_w}, {0, XK_1}, {0, XK_2}}, tag, {.ui = 1 << 11 }}),  // Move window to tag "12"
        TAGKEYS(                        XK_1,                      0)
        TAGKEYS(                        XK_2,                      1)
