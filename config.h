@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13" };
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -100,6 +100,10 @@ static Keychord *keychords[] = {
        &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_1}}, view, {.ui = 1 << 10}}),  // For tag "11"
        &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_2}}, view, {.ui = 1 << 11}}),  // For tag "12"
        &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_3}}, view, {.ui = 1 << 12}}),  // For tag "13"
+       &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_4}}, view, {.ui = 1 << 13}}),  // For tag "14"
+       &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_5}}, view, {.ui = 1 << 14}}),  // For tag "15"
+       &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_6}}, view, {.ui = 1 << 15}}),  // For tag "16"
+       &((Keychord){3, {{MODKEY, XK_a}, {0, XK_1}, {0, XK_7}}, view, {.ui = 1 << 16}}),  // For tag "17"
        &((Keychord){3, {{MODKEY, XK_w}, {0, XK_1}, {0, XK_2}}, tag, {.ui = 1 << 11 }}),  // Move window to tag "12"
        TAGKEYS(                        XK_1,                      0)
        TAGKEYS(                        XK_2,                      1)
